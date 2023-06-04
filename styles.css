@@ -1,0 +1,135 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Geologica', sans-serif;
+}
+
+header {
+  background-color: #5ba8a2;
+  padding: 20px;
+}
+footer {
+  background-color: #5ba8a2;
+  margin: 0;
+  width: 100%;
+  padding: 20px;}
+
+nav ul {
+  font-size: 2em;
+  list-style: none;
+  padding: 0 10%;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #008080;
+}
+section{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 1em 0 0;
+  padding: 20px 0;
+  border-bottom: 5px solid #0887b9;
+}
+
+p {
+  font-size: 1.5em;
+  margin: 20px 0;
+  
+}
+
+iframe {
+  text-align: center;
+  
+
+}
+
+img {
+  margin: 10px;
+
+}
+form {
+  max-width: 400px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #0887b9;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#error-mensaje {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+/*#inicio{
+  
+  margin: 0px;
+  padding: 20px auto;
+ 
+
+}
+#turismo{
+  
+  margin: 0px;
+  padding: 20px auto;
+}
+#gastronomia{
+  
+  margin: 0px;
+  padding: 20px auto;
+}
+#contacto{
+  
+  margin-bottom: 20px;
+ 
+}
+*/
+#escudo {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+
+}
+
+.pContainerNos{
+display: inline-block
+}

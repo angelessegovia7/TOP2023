@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Neuquén</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="favicon.gif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+
+
+  <script>
+    function validarFormulario() {
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      var mensaje = document.getElementById("mensaje").value;
+
+
+      var errorMensaje = document.getElementById("error-mensaje");
+
+      // Validar que los campos no estén vacíos
+      if (nombre === "" || email === "" || mensaje === "") {
+        errorMensaje.innerText = "Por favor, completa todos los campos";
+        //alert("Por favor, completa todos los campos");
+        errorMensaje.style.display = "block";
+        return false;
+      }
+
+      // Validar formato de correo electrónico
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errorMensaje.innerText = "Por favor, ingresa un correo electrónico válido";
+        errorMensaje.style.display = "block";
+        return false;
+      }
+
+      // Si todos los campos son válidos, el formulario se envía
+      alert("Mensaje enviado");
+      return true;
+    }
+  </script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#turismo">Turismo</a></li>
+        <li><a href="#gastronomia">Gastronomía</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div id="escudo">Escudo</div>
+  </header>
+
+
+  <section id="inicio">
+    <h1>Bienvenidos a la Ciudad de Neuquén</h1>
+    <p>Neuquén es una ciudad y municipio ubicada en la Patagonia argentina. Administrativamente es la capital de la
+      provincia del Neuquén y cabecera del departamento Confluencia. Es la capital de provincia más joven del país, ​ y
+      desde la década de 1990, la ciudad más poblada de la Patagonia argentina. </p>
+    <img src="mirador.jpg" width="800px">
+  </section>
+
+  <section id="turismo">
+    <h1>Turismo</h1>
+    <p>Información sobre los destinos turísticos destacados en Neuquén y actividades disponibles.</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99303.8348958498!2d-68.1154008!3d-38.9412346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33ba35eb8e35%3A0x6220acb810e3e2f5!2zTmV1cXXDqW4!5e0!3m2!1ses-419!2sar!4v1685495422235!5m2!1ses-419!2sar"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </section>
+
+  <section id="gastronomia">
+    
+      <h1>Gastronomía</h1>
+    <p>Descubre los platos típicos de Neuquén y los restaurantes recomendados para disfrutarlos.</p>
+      <img src="gastronomia/foto1.jpg">
+      <img src="gastronomia/foto2.jpg">
+      <img src="gastronomia/foto3.jpg">
+      <img src="gastronomia/foto4.jpg">
+
+  </section>
+
+      
+
+  <section>
+    <h2>Nuestros Restaurantes</h2>
+    <div id="app" class="subcont2">
+     <div id="response" class="containerNos">
+        <div class="pContainerNos"> 
+          <img src="/tpo/gastronomia/th.jpeg" alt="" class="slide" /> 
+          <ul class="ulNos">
+            <li><b>Caviahue</b></li>
+          </ul>
+        </div>
+
+        <div class="pContainerNos"> 
+          <img src="/tpo/gastronomia/th (1).jpeg" alt="" class="slide" /> 
+          <ul class="ulNos">
+            <li><b>Neuquén Capital</b></li>
+          </ul>
+        </div>
+
+        <div class="pContainerNos"> 
+          <img src="/tpo/gastronomia/th (2).jpeg" alt="" class="slide" /> 
+          <ul class="ulNos">
+            <li><b>Cutralcó</b></li>
+          </ul>
+        </div>
+
+        <div class="pContainerNos"> 
+          <img src="/tpo/gastronomia/th (3).jpeg" alt="" class="slide" /> 
+          <ul class="ulNos">
+            <li><b>Villa La Angostura</b></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="contacto">
+    <h1>Contacto</h1>
+    <form onsubmit="validarFormulario()" id="contact-form" method="get">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje"></textarea>
+      <div id="error-mensaje"></div>
+      <input type="submit" value="Enviar">
+    </form>
+  </section>
+
+  <footer>Copyright 2023</footer>
+</body>
+
+</html>
